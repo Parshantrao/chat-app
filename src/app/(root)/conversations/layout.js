@@ -25,7 +25,7 @@ function ConversationsLayout({ children }) {
           conversations ?
             conversations.length === 0 ? <p className='h-full w-full flex items-center justify-center'>No Conversations found</p> :
               conversations.map((conversation, idx) => {
-                console.log(conversation)
+                
                 return conversation.conversation.isGroup ?
                   <GroupConversationItem
                     key={conversation.conversation._id}

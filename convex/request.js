@@ -46,8 +46,7 @@ export const createRequest = mutation({
 
         const friends2 = await ctx.db.query('friends').withIndex("by_user2", q => q.eq('user2', currentUser._id)).collect()
 
-        console.log(friends1,friends2,receiver._id)
-
+       
         if (friends1.some((friend) => friend.user2 === receiver._id) || friends2.some((friend) => friend.user1 === receiver._id)) {
             throw new ConvexError("You are already friends with this user")
         }

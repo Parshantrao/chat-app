@@ -44,7 +44,7 @@ export const requestCount = query({args:{},handler:async(ctx,args)=>{
 
 
         const currentUser = await getUserByClerkId(ctx,identity.subject);
-
+        
         if(!currentUser){
             throw new ConvexError("User not found")
         }

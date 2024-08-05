@@ -25,7 +25,7 @@ function ChatInput() {
   const { register,setValue, handleSubmit, formState: { errors }, reset } = useForm({ resolver: zodResolver(chatMessageSchema), defaultValues: { text: "" } })
 
   const onSubmit = async ({ text }) => {
-    console.log(text)
+    
     createMessage({ conversationId, type: 'text', content: [text] }).then(() => {
       reset()
     }).catch(err =>

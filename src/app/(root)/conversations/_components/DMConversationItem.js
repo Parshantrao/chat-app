@@ -8,7 +8,6 @@ import React from 'react'
 function DMConversationItem({
     id, imageurl, username, lastMessageSender=null, lastMessageContent=null,unseenCount
 }) {
-    console.log(id, imageurl, username, lastMessageSender=null, lastMessageContent=null)
     return (
         <Link href={`/conversations/${id}`} className='w-full'>
             <Card className="p-2 flex flex-row items-center justify-between truncate">
