@@ -37,8 +37,8 @@ export const getRequest = query({
 
 export const requestCount = query({args:{},handler:async(ctx,args)=>{
     const identity = await ctx.auth.getUserIdentity()
-        console.log(identity,'identity')
-        if(!identity){
+
+    if(!identity){
             throw new ConvexError("Unauthorized")
         }
 
